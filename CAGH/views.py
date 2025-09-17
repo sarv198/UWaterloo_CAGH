@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -10,6 +10,18 @@ def home(request):
     posts = Post.objects.all()
     return render(request, 'CAGH/home.html', {"posts":posts})
 
+def about(request):
+    return render(request, 'CAGH/about.html')
+
+def events(request):
+    return render(request, 'CAGH/events.html')
+
+def involvement(request):
+    return render(request, 'CAGH/involvement.html')
+
+def team(request):
+    return render(request, 'CAGH/team.html')
+
 
 # View details
 def post_details(request, pk):
@@ -18,7 +30,7 @@ def post_details(request, pk):
 
 # New Post
 class PostCreateView(CreateView):
-    model = "Post"
+    model = Post
     template_name = "CAGH/post_form.html"
     fields = ["title", "content"]
     success_url = reverse_lazy("home")
@@ -26,7 +38,7 @@ class PostCreateView(CreateView):
 
 # Update
 class PostUpdateView(UpdateView):
-    model = "Post"
+    model = Post
     template_name = "CAGH/post_form.html"
     fields = ["title", "content"]
     success_url = reverse_lazy("home")
