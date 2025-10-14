@@ -136,6 +136,7 @@ STATICFILES_FINDERS = [
 # Vercel static files configuration
 if os.environ.get('VERCEL'):
     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
