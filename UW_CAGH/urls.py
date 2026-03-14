@@ -14,20 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('CAGH/', include('CAGH.urls')),
+    # Static files MUST come before the catch-all '' - otherwise /static/* returns the SPA HTML
+    re_path(r'^static/(?P<path>.*)$', serve),
     path('', include('CAGH.urls')),
 ]
-
-# Serve static files during development
-if settings.DEBUG:
-    from django.contrib.staticfiles.views import serve
-    from django.urls import re_path
-    urlpatterns += [
-        re_path(r'^static/(?P<path>.*)$', serve),
-    ]
