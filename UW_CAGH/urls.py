@@ -15,14 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('CAGH/', include('CAGH.urls')),
-    # Static files MUST come before the catch-all '' - otherwise /static/* returns the SPA HTML
+    # Static files - must be BEFORE catch-all. WhiteNoise handles in prod; Django serve uses finders in DEBUG.
     re_path(r'^static/(?P<path>.*)$', serve),
     path('', include('CAGH.urls')),
 ]

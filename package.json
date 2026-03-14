@@ -1,0 +1,7 @@
+{
+  "name": "uw-cagh",
+  "version": "1.0.0",
+  "scripts": {
+    "vercel-build": "cd frontend && npm ci && npm run build && cd .. && pip install -r requirements.txt && python manage.py collectstatic --noinput"
+  }
+}
