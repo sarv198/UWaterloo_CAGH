@@ -13,6 +13,8 @@ urlpatterns = [
     path('events/', views.react_spa),
     path('involvement/', views.react_spa),
     path('team/', views.react_spa),
+    path('global-health-news/', views.react_spa),
+    path('global-health-news', views.react_spa),
     path('blog/', views.react_spa),
     path('blog/post/new/', views.react_spa),
     path('blog/post/<int:pk>/', views.react_spa),

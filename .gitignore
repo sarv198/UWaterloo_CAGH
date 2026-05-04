@@ -75,6 +75,9 @@ celerybeat.pid
 # mkdocs documentation
 /site
 
+# Vite build metadata (hashed asset names are in react_spa.html)
+CAGH/static/frontend/.vite/
+
 # Node.js (if you use Node.js for frontend)
 node_modules/
 npm-debug.log*
