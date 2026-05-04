@@ -8,6 +8,7 @@ import BlogHome from './pages/BlogHome'
 import PostDetail from './pages/PostDetail'
 import PostForm from './pages/PostForm'
 import PostDelete from './pages/PostDelete'
+import GlobalHealthNews from './pages/GlobalHealthNews'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="blog/post/:id" element={<PostDetail />} />
         <Route path="blog/post/:id/edit" element={<PostForm />} />
         <Route path="blog/post/:id/delete" element={<PostDelete />} />
+        <Route path="global-health-news" element={<GlobalHealthNews />} />
       </Route>
     </Routes>
   )

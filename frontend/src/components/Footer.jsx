@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="container-fluid bg-light py-4 mt-5">
+    <div className="container-fluid site-footer py-4 mt-auto">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -9,7 +9,10 @@ export default function Footer() {
         </div>
         <div className="row">
           <div className="col-md-4 mb-3">
-            <div className="content-section text-center h-100" style={{ background: 'linear-gradient(135deg, #E91E63, #F8BBD9)', borderColor: '#E91E63' }}>
+            <div
+              className="content-section footer-card text-center h-100"
+              style={{ background: 'linear-gradient(135deg, #E91E63, #F8BBD9)', borderColor: '#E91E63' }}
+            >
               <i className="bi bi-instagram fs-1 text-white mb-3"></i>
               <h5 className="text-white mb-2">Follow Us on Instagram</h5>
               <p className="text-white mb-3">@cagh_uw</p>
@@ -19,7 +22,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-md-4 mb-3">
-            <div className="content-section text-center h-100" style={{ background: 'linear-gradient(135deg, #1DB954, #1ed760)', borderColor: '#1DB954' }}>
+            <div
+              className="content-section footer-card text-center h-100"
+              style={{ background: 'linear-gradient(135deg, #1DB954, #1ed760)', borderColor: '#1DB954' }}
+            >
               <i className="bi bi-spotify fs-1 text-white mb-3"></i>
               <h5 className="text-white mb-2">Listen to Our Podcast</h5>
               <p className="text-white mb-3">UW CAGH - Voices for Global Health</p>
@@ -29,7 +35,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-md-4 mb-3">
-            <div className="content-section text-center h-100" style={{ background: 'linear-gradient(135deg, #2196F3, #64B5F6)', borderColor: '#2196F3' }}>
+            <div
+              className="content-section footer-card text-center h-100"
+              style={{ background: 'linear-gradient(135deg, #2196F3, #64B5F6)', borderColor: '#2196F3' }}
+            >
               <i className="bi bi-envelope fs-1 text-white mb-3"></i>
               <h5 className="text-white mb-2">Join Our Mailing List</h5>
               <p className="text-white mb-3">Stay updated with our latest news</p>
