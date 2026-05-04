@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
 
+const base = import.meta.env.BASE_URL
+const cookieImg = `${base}images/events/cookie-fundraiser-event.png`
+const panelImg = `${base}images/events/healthcare-panellist-event.png`
+
 export default function Events() {
   return (
     <>
@@ -19,13 +23,21 @@ export default function Events() {
           <h2 className="h3 text-primary mb-4">Previous Events</h2>
 
           <div className="content-section mb-4">
-            <div className="row">
-              <div className="col-md-3">
-                <div className="bg-warning text-dark text-center p-3 rounded">
-                  <i className="bi bi-cookie fs-1"></i>
+            <div className="row align-items-center g-3">
+              <div className="col-md-4 col-lg-3">
+                <div className="event-thumb-wrap">
+                  <img
+                    src={cookieImg}
+                    alt="Cookie fundraiser promotional graphic with chocolate chip cookies"
+                    className="event-thumb"
+                    width={480}
+                    height={360}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
-              <div className="col-md-9">
+              <div className="col-md-8 col-lg-9">
                 <h4 className="text-primary">Cookie Fundraiser</h4>
                 <p>Proceeds go to local charity</p>
                 <p className="small text-muted"><strong>Ex.</strong> Adventure For Change</p>
@@ -39,13 +51,21 @@ export default function Events() {
           </div>
 
           <div className="content-section mb-4">
-            <div className="row">
-              <div className="col-md-3">
-                <div className="bg-primary text-white text-center p-3 rounded">
-                  <i className="bi bi-people fs-1"></i>
+            <div className="row align-items-center g-3">
+              <div className="col-md-4 col-lg-3">
+                <div className="event-thumb-wrap">
+                  <img
+                    src={panelImg}
+                    alt="Healthcare panellist event — three speaker portraits"
+                    className="event-thumb"
+                    width={480}
+                    height={360}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
-              <div className="col-md-9">
+              <div className="col-md-8 col-lg-9">
                 <h4 className="text-primary">Healthcare Panellist Event</h4>
                 <p>Professionals and upper year students share career experiences and networking opportunities</p>
                 <p>Undergraduate students gain insights and practical advice on securing research positions</p>
